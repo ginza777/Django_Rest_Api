@@ -41,8 +41,14 @@ INSTALLED_APPS = [
     'app.apps.AppConfig',
     'phonenumber_field',
     'django_filters',
-]
+    'rest_framework_swagger',
+    'drf_yasg',
 
+]
+SWAGGER_SETTINGS = {
+
+    'VALIDATOR_URL': 'http://localhost:8189',
+}
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

@@ -60,6 +60,7 @@ class CompanyMemberListId(ListAPIView):
         return CompanyMember.objects.filter(company__id=company_id)
 
 class CustomUserListExcel(GenericAPIView):
+    serializer_class = CustomUserListSerializer
 
     def get(self, request, *args, **kwargs):
         users = CustomUser.objects.all()  # Get your queryset as needed
